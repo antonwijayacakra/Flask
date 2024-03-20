@@ -1,0 +1,18 @@
+<html>
+ <head>
+    <title>Berlatih kirim Variabel</title>
+ </head>
+   <body>
+   {% if is_logged_in%}
+      <h1> Selamat datang {{nama}}</h1>
+      {%else%}
+      <h2> Akses ditolak</h2>
+      {% endif %}
+      <ul>
+        {%for item in items %}
+        <li> {{item}}</li>
+        {% endfor %}
+      </ul>
+      </form>
+   </body>    
+</html>
