@@ -1,5 +1,4 @@
 from flask import Flask
-import json
 
 app = Flask(__name__)
 
@@ -9,7 +8,8 @@ def hello_world():
 
 @app.route('/about')
 def about():
-    return 'Tentang kami'
+    return ' <h1> Tentang kami </h2>'
+
 
 
 if __name__ == '__main__':
