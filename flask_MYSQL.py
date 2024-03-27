@@ -21,5 +21,13 @@ def main():
      return "success"
   return  render_template('loginform.html')
 
+@app.route("/users")
+def users():
+    cur = mysql.connection.cursor()
+    users = cur .execute("SELECT * FROM user")
+    if users > 0:
+       userDetails = cur.fetchall()
+       return render_template('data_tabel_user.html', userDetails=userDetails)
+
 if __name__ == "__main__":
     app.run(debug=True)
